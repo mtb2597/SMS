@@ -107,4 +107,10 @@ public class A {
 		System.out.println(x);
 		obj1.DeleteProduct(x);
 	}
+	
+	@GetMapping("/product_select")
+	public Product getProduct(@RequestParam("y") int n) 
+	{
+		return obj1.SelectProduct(n);
+	}
 }
