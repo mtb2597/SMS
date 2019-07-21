@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+	 <header>
+		 <div class="container">
+			 <div id="branding">
+			 <h1> <span class="highlight">Sales Monitoring System</span></h1>
+			 </div>
+			 <nav>
+				 <ul>
+					 
+                                         <li class="current"><a href="http://localhost:4200/customer">PRODUCT LIST</a></li>
+                                         
+										 <li><a href="">LOGOUT</a></li>
+				 </ul>
+			 </nav>
+		 </div>
+	 </header><br>
+            <h4 style="padding-left: 600px">LIST OF ITEMS</h4>
+                    <mat-card >
+    <div class="example-container mat-elevation-z8" >
+        <mat-table #Table [dataSource]="MyDataSource" style="padding-left: 210px;">
+            <!-- For ID -->
+            <ng-container matColumnDef="Product Id">
+                <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Product ID </mat-header-cell>
+                <mat-cell *matCellDef="let get"> {{get.Product_Id}} </mat-cell>
+            </ng-container>
+
+            <!-- For User ID -->
+            <ng-container matColumnDef="Product Name">
+                <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Product Name </mat-header-cell>
+                <mat-cell *matCellDef="let get"> {{get.Product_Name}} </mat-cell>
+            </ng-container>
+
+            <!-- For Title -->
+            <ng-container matColumnDef="Price">
+                <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Price </mat-header-cell>
+                <mat-cell *matCellDef="let get"> {{get.Price}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+</mat-card>           
+            <div class="container" style="font-family: Arial, Helvetica, sans-serif; font-weight:bold">
+                <div  style = "padding-left: 380px">
+               
+                <table border="0" cellspacing="4" cellpadding="1"  >
+                    <thead>
+                        <tr>
+                            <th><br></th>
+                            <th><br></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      
+                        <tr>
+                    <td id="block1"><label>Enter Product Name</label><br><br></td>
+                    <td ><input type="text"  placeholder="Enter Product To Purchase"  name="qty" #qty /><br><br></td>
+                        </tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                                <tr>
+                                    <td   ><input   type="submit" value="MAKE PAYMENT"  (click)="addtocart(qty.value)" style=" width:120%; height:45px; font-weight:bold "/></td>
+                                      <td style="padding-left: 50px;"><input  type="submit" value="RESET"  (click)="reset(qty)" style=" width:80%; height:45px; font-weight:bold; "/></td>
+                                
+                                </tr>
+                            
+                    </tbody>
+                </table>
+                
+                </div>

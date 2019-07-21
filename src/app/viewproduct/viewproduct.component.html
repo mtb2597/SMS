@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+	 <header>
+		 <div class="container">
+			 <div id="branding">
+			 <h1> <span class="highlight">Sales Monitoring System</span></h1>
+			 </div>
+			 <nav>
+				 <ul>
+					 <li><a href="http://localhost:4200/adminfirstscreen">ADMIN</a></li>
+					 
+                                         <li class="current"><a href="http://localhost:4200/viewproduct">PRODUCT LIST</a></li>
+                                         
+										 <li><a href="">LOGOUT</a></li>
+				 </ul>
+			 </nav>
+		 </div>
+	 </header><br>
+            <h4 style="padding-left: 620px">LIST OF ITEMS</h4>
+            <mat-card >
+                <div class="example-container mat-elevation-z8" >
+                    <mat-table #Table [dataSource]="MyDataSource" style="padding-left: 210px;">
+                        <!-- For ID -->
+                        <ng-container matColumnDef="Product Id">
+                            <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Product ID </mat-header-cell>
+                            <mat-cell *matCellDef="let get"> {{get.Product_Id}} </mat-cell>
+                        </ng-container>
+            
+                        <!-- For User ID -->
+                        <ng-container matColumnDef="Product Name">
+                            <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Product Name </mat-header-cell>
+                            <mat-cell *matCellDef="let get"> {{get.Product_Name}} </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Quantity">
+                            <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Product Name </mat-header-cell>
+                            <mat-cell *matCellDef="let get"> {{get.Quantity}} </mat-cell>
+                        </ng-container>
+            
+                        <!-- For Title -->
+                        <ng-container matColumnDef="Price">
+                            <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Price </mat-header-cell>
+                            <mat-cell *matCellDef="let get"> {{get.Price}} </mat-cell>
+                        </ng-container>
+            
+                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                    </mat-table>
+                </div>
+            </mat-card>           
+            <div class="container" style="font-family: Arial, Helvetica, sans-serif; font-weight:bold">
+                <div  style = "padding-left: 335px">
+               
+                <table border="0" cellspacing="4" cellpadding="1"  >
+                    <thead>
+                        <tr>
+                            <th><br></th>
+                            <th><br></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      
+                        <tr>
+                    <td id="block1"><label>PRODUCT ID</label><br><br></td>
+                    <td ><input  type="text"  placeholder= "Enter Product Id" name="pname" #pid /><br><br></td>
+                        </tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr>
+                            <td style="padding-inline-start:100px"><input  type="button" value="DELETE PRODUCT" (click)="DeleteProduct(pid.value)" (mouseleave)="clear(pid)" style=" width:100%; height:45px; font-weight:bold "/><br><br></td>
+                            </tr>
+                    </tbody>
+                </table>
+                
+                </div>
+ 
+

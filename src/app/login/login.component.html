@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+	 <header>
+		 <div class="container">
+			 <div id="branding">
+			 <h1> <span class="highlight">Sales Monitoring System</span></h1>
+             </div>
+		 </div>
+     </header>
+            <div class="container" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold">
+                <div  style = "padding-left: 330px">
+                <table border="0" cellspacing="5" cellpadding="1"  >
+                    <thead>
+                        <tr>
+                            <th><br></th>
+                            <th><br></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                          <tr></tr>
+                        <tr>
+                    <td id="block1" style="padding-top: 20px;"><label>USER NAME</label><br><br></td>
+                    <td style="padding-inline-start:10px;padding-top: 20px;" ><input type="text"  placeholder="Enter Username" name="username" #name /><br>
+                        <span style="color: darkred;padding-left: 1px; " >{{loginname}}</span><br></td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td id="block1" style="padding-top: 20px;"><label>PASSWORD</label><br><br></td>
+                             <td style="padding-inline-start:10px;padding-top: 20px;" ><input  type="password"  placeholder= "Enter Password" name="password" #password  /><br>
+                                <span style="color:darkred;padding-left: 1px;" >{{loginpass}}</span><br></td>
+                            
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr>
+                                <td style="padding-inline-start:35px"><input  type="submit" value="ADMIN LOGIN" (click)="submit(name.value,password.value)" (blur)="clear(name,password)" style=" width:200%; height:45px; font-weight:bold "/></td>
+                            
+                            </tr>
+                            <tr></tr>
+                            <tr></tr>
+                
+                           <tr><td style = "padding-inline-start:170px">OR</td></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <td style="padding-inline-start:35px"><input  type="submit" value="CUSTOMER LOGIN" (click)="customersubmit(name.value,password.value)" (mouseleave)="clear(name,password)" style=" width:200%; height:45px; font-weight:bold "/></td>
+                        <tr></tr>
+                       
+                    </tbody>
+                </table>
+                </div>
+              
+            </div>
+        
+    </body>
+    
+</html>

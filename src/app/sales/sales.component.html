@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+	 <header>
+		 <div class="container">
+			 <div id="branding">
+			 <h1> <span class="highlight">Sales Monitoring System</span></h1>
+			 </div>
+			 <nav>
+				 <ul>
+					 <li><a href="http://localhost:4200/adminfirstscreen">ADMIN</a></li>
+					 
+                                         <li class="current"><a href="http://localhost:4200/sales">SALES LIST</a></li>
+										 <li><a href="">LOGOUT</a></li>
+					 
+				 </ul>
+			 </nav>
+		 </div>
+	 </header><br>
+	 <h4 style="padding-left: 570px;font-size:20px">MONTH WISE SALES</h4><br>
+   <mat-card >
+      <div class="example-container mat-elevation-z8" >
+          <mat-table #Table [dataSource]="MyDataSource" style="padding-left: 220px;">
+              <!-- For ID -->
+              <ng-container matColumnDef="Product Id">
+                  <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black">Product Id </mat-header-cell>
+                  <mat-cell *matCellDef="let get"> {{get.product_Id}} </mat-cell>
+              </ng-container>
+  
+              <!-- For User ID -->
+              <ng-container matColumnDef="Product Name">
+                  <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Product Name </mat-header-cell>
+                  <mat-cell *matCellDef="let get"> {{get.product_Name}} </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="Quantity Sold">
+                  <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Quantity Sold </mat-header-cell>
+                  <mat-cell *matCellDef="let get"> {{get.quantity_Sold}} </mat-cell>
+              </ng-container>
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+      </div>
+  </mat-card>       
+            
+    </body>
+    
+</html>

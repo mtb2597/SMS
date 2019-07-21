@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+	 <header>
+		 <div class="container">
+			 <div id="branding">
+			 <h1> <span class="highlight">Sales Monitoring System</span></h1>
+			 </div>
+			 <nav>
+				 <ul>
+					 <li><a href="http://localhost:4200/adminfirstscreen">ADMIN</a></li>
+					 
+                                         <li class="current"><a href="http://localhost:4200/customerlist">CUSTOMER LIST</a></li>
+                                         <li><a href="">LOGOUT</a></li>       
+					 
+				 </ul>
+			 </nav>
+		 </div>
+	 </header>
+                <div   style = "padding-left: 290px;"><br><br>
+                   <h4 style="padding-left: 280px;padding-top: 1px;font-size: 18px">LIST OF CUSTOMERS</h4>
+                </div>
+              <mat-card >
+                <div class="example-container mat-elevation-z8" >
+                    <mat-table #Table [dataSource]="MyDataSource" style="padding-left: 100px;">
+                        <!-- For ID -->
+                        <ng-container matColumnDef="Customer Name">
+                            <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Customer Name </mat-header-cell>
+                            <mat-cell *matCellDef="let get"> {{get.customer_Name}} </mat-cell>
+                        </ng-container>
+            
+                        <!-- For User ID -->
+                        <ng-container matColumnDef="Address">
+                            <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Address </mat-header-cell>
+                            <mat-cell *matCellDef="let get"> {{get.address}} </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="City">
+                            <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> City </mat-header-cell>
+                            <mat-cell *matCellDef="let get"> {{get.city}} </mat-cell>
+                        </ng-container>
+            
+                        <!-- For Title -->
+                        <ng-container matColumnDef="Phone No">
+                            <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Phone No</mat-header-cell>
+                            <mat-cell *matCellDef="let get"> {{get.phone_No}} </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Outstanding Amt">
+                            <mat-header-cell *matHeaderCellDef style="font-weight: bold; font-size: 16px; color:black"> Outstanding Amt </mat-header-cell>
+                            <mat-cell *matCellDef="let get"> {{get.outstanding_Amount}} </mat-cell>
+                        </ng-container>
+            
+                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                    </mat-table>
+                </div>
+            </mat-card>       
+            <div style="padding-left:300px">   
+                  <table  border="0" cellspacing="5" cellpadding="1"   style = "padding-left:210px">
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr>
+                          <td style = "font-weight:bold"><label>Enter City</label><br><br></td>
+                           <td style="padding-inline-start:56px" ><input  type="text" name="id"  placeholder= "Enter City" #city/><br><br></td>
+                      </tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                 <tr ><td style="padding-left:100px"><input  type="submit" value="SEARCH" (click)="SearchCustomer(city.value)" (mouseleave)="clear(city)" style=" width:200%; height:40px; font-weight:bold;"/></td></tr>
+                      </table>
+                </div>
+                    
+          
+    </body>
+    
+</html>
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+	 <header>
+		 <div class="container">
+			 <div id="branding">
+			 <h1> <span class="highlight">Sales Monitoring System</span></h1>
+             </div>
+             <nav>
+                <ul>
+                  <li><a href="http://localhost:4200/adminfirstscreen">ADMIN</a></li>
+                   <li class="current"><a href="http://localhost:4200/productlist">ADD PRODUCT</a></li>
+                   <li><a href="">LOGOUT</a></li>
+                </ul>
+              </nav>
+		 </div>
+     </header>
+     <div class="container" style="font-family:Arial, Helvetica, sans-serif; font-weight:bold">
+            <div  id="lform">
+               <div style = "padding-left: 350px">
+                <table border="0" cellspacing="5" cellpadding="1" width="50%"  >
+                  <thead>
+                     
+                  </thead>
+                  <tbody>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                      <tr>
+                  <td id="block1"><label>Product Id</label><br><br></td>
+                  <td style="padding-inline-start:10px" ><input type="text" (keyup)="SingleProduct(pid.value,pname,qty,price)" placeholder="Enter Product Id" name="username" #pid /><br><br></td>
+
+                      </tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr>
+                          <td id="block1"><label>Product Name</label><br><br></td>
+                           <td style="padding-inline-start:10px" ><input  type="text" placeholder= "Enter Product Name" name="pname" #pname /><br><br></td>
+                           
+                      </tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr>
+                        <td id="block1"><label>Quantity</label><br><br></td>
+                        <td style="padding-inline-start:10px" ><input type="text"  placeholder= "Enter Quantity" name="qty" #qty  /><br><br></td>
+                      </tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr>
+                        <td id="block1"><label>Price</label><br><br></td>
+                        <td style="padding-inline-start:10px" ><input  type="text"  placeholder= "Enter Price" name="price" #price  /><br><br></td>
+                      </tr>
+                      <tr></tr>
+                      <tr></tr>
+                      <tr></tr>
+                    </tbody>
+                  </table>
+                </div>
+                    <table border="0" cellspacing="5" cellpadding="1"  width="80%" style="padding-left: 160px; " >
+                    <thead>
+                       
+                    </thead>
+                    <tbody>
+                      <tr>
+                      </tr>
+                      <tr></tr>
+                      <tr>
+                              <td width = 35% ><input   type="submit" value="ADD PRODUCT" (click)="AddProduct(pid.value,pname.value,qty.value,price.value)"  style=" width:90%; height:45px; font-weight:bold "/></td>
+                                <td width = 35%><input  type="submit" value="MODIFY PRODUCT" (click)="ModifyProduct(pid.value,pname.value,qty.value,price.value)"  style=" width:90%; height:45px; font-weight:bold; "/></td>
+                                <td><input  type="submit" value="RESET" (click)="ResetProduct(pid,pname,qty,price)"  style=" width:90%; height:45px; font-weight:bold; "/></td>
+                          </tr>
+                          <tr></tr>
+                          <tr></tr>
+              
+                         
+                      <tr></tr>
+                     
+                  </tbody>
+              </table>
+                
+                
+                    
+         
+       
+
