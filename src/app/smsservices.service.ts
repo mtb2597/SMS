@@ -5,7 +5,7 @@ import { Product } from './product';
 import { UserLogin } from './user-login';
 import { Customer } from './customer';
 import { Sales } from './sales';
-
+import { Invoice } from './invoice';
 const httpOptions = {
   headers: new HttpHeaders({ 'ContentType': 'application/json' })
 };
@@ -87,6 +87,16 @@ export class SmsservicesService {
   {
     let urilink="http://localhost:8080/invoice_select?y="+x;     
       return  this.mac.get(urilink);
+  }
+  ajaxcall11(x :number) 
+  {
+    let urilink="http://localhost:8080/invoice_qtystore?y="+x;     
+      return  this.mac.get(urilink);
+  }
+  ajaxcall12(x :string) :Observable<Invoice>
+  {
+      let urilink="http://localhost:8080/invoice_display?y="+x;
+      return  this.mac.get<Invoice>(urilink);
   }
  /* ajaxcall8(x: string) :Observable<Customer>
   {

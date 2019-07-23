@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-
+<script type="text/javascript">
+  $window.onload = function() {
+    SingleInvoice(pname,qty,price,tot,discount,famt);
+  };
+  </script>
 	<body>
 	 <header>
 		 <div class="container">
@@ -19,18 +23,16 @@
      <div class="container" style="font-family: Arial, Helvetica, sans-serif; font-weight:bold">
             <div  id="lform">
                <div style = "padding-left: 350px"><br>
-                <h4 style="padding-left:125px;font-size: 20px;font-family: Arial, Helvetica, sans-serif">INVOICE</h4>
+                <h4 style="padding-left:125px;font-size: 20px;font-family: Arial, Helvetica, sans-serif" >INVOICE</h4>
                 <table border="0" cellspacing="2" cellpadding="1" width="50%">
                   <tbody>
                     <tr></tr>
                     <tr></tr>
                     <tr></tr>
                     <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
                       <tr>
                   <td id="block1"><label>Product Name</label><br><br></td>
-                  <td style="padding-inline-start:10px;" ><input style="border-style: none; background:lightsteelblue" type="text"  name="username" #name /><br><br></td>
+                  <td style="padding-inline-start:10px;" ><span style="color:cornflowerblue">{{pname}} </span><br><br></td>
 
                       </tr>
                       <tr></tr>
@@ -38,7 +40,7 @@
                       <tr></tr>
                       <tr>
                           <td id="block1"><label>Quantity</label><br><br></td>
-                           <td style="padding-inline-start:10px" ><input style="border-style: none; background:lightsteelblue" type="text"  name="password" #password /><br><br></td>
+                           <td style="padding-inline-start:10px" ><span style="color:cornflowerblue">{{qty}} </span><br><br></td>
                            
                       </tr>
                       <tr></tr>
@@ -46,33 +48,36 @@
                       <tr></tr>
                       <tr>
                         <td id="block1"><label>Price</label><br><br></td>
-                        <td style="padding-inline-start:10px" ><input style="border-style: none; background:lightsteelblue"  type="text" name="password" #password /><br><br></td>
+                        <td style="padding-inline-start:10px" ><span style="color:cornflowerblue"> {{price}}</span><br><br></td>
                       </tr>
                       <tr></tr>
                       <tr></tr>
                       <tr></tr>
                       <tr>
                         <td id="block1"><label>Total Bill</label><br><br></td>
-                        <td style="padding-inline-start:10px" ><input style="border-style: none; background:lightsteelblue" type="text" name="password" #password /><br><br></td>
+                        <td style="padding-inline-start:10px" ><span style="color:cornflowerblue">{{tot}}</span><br><br></td>
                       </tr>
                       <tr></tr>
                       <tr></tr>
                       <tr></tr>
                       <tr>
                           <td id="block1"><label>Discount Offered</label><br><br></td>
-                          <td style="padding-inline-start:10px" ><input style="border-style: none; background:lightsteelblue" type="text"   name="password" #password /><br><br></td>
+                          <td style="padding-inline-start:10px" ><span style="color:cornflowerblue">{{discount}}</span><br><br></td>
                       </tr>
                       <tr></tr>
                       <tr></tr>
                       <tr>
                           <td id="block1"><label>Final Amount</label><br><br></td>
-                          <td style="padding-inline-start:10px" ><input style="border-style: none; background:lightsteelblue"  type="text" name="password" #password /><br><br></td>
+                          <td style="padding-inline-start:10px" ><span style="color:cornflowerblue">{{famt}}</span><br><br></td>
                       </tr>
                       <tr></tr>
-                     
+                      <tr></tr>
+                      
                   </tbody>
-              </table>
-                
-                </div>
+              </table><br>
+            </div>
+            <div style="padding-left:260px">
+              <span style="color:green ;font-size:20px">{{result}}</span>
+               </div>
                     
          

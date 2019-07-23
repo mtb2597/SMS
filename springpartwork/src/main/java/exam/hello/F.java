@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface F extends JpaRepository<Customer_Details, Object> {
 
+
 }

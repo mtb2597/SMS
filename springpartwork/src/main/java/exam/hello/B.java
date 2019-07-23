@@ -12,6 +12,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class B {
 	
+	public int price;
+	public int qty;
+	public int pid;
+	public int tot;
+	public double discount;
+	public double finalamt;
 	private C obj1;
 	private D obj2;
 	private F obj3;
@@ -140,13 +146,59 @@ public class B {
 				 y = x.get();  
 				
 			}
+			pid = y.getProduct_Id();
 			Invoice i = new Invoice();
 			i.setProduct_Id(y.getProduct_Id());
 			i.setProduct_Name(y.getProduct_Name());
-			i.setQuantity(y.getQuantity());
+			i.setQuantity(qty);
+			int price = (int)y.getPrice();
 			i.setPrice((int)y.getPrice());
+			tot = qty*price;
+			i.setTotal_Bill(tot);
+			if(tot > 10000)
+			{
+				discount = 0.2*tot;
+				finalamt = tot-discount;
+				i.setDiscount_Offered(discount);
+				i.setFinal_Amount(finalamt);
+			}
+			if(tot > 5000 && tot<10000)
+			{
+				discount = 0.1*tot;
+				finalamt = tot-discount;
+				i.setDiscount_Offered(discount);
+				i.setFinal_Amount(finalamt);
+			}
 			obj5.save(i);
+			
 		}
+
+		public int QuantityStore(int p) 
+		{
+			qty = p;
+			System.out.println(qty);
+			return qty;
+			
+		}// TODO Auto-generated method stub
+
+		public Invoice SelectInvoice() {
+			System.out.println(pid);
+			Optional<Invoice> x = obj5.findById(pid);
+			Invoice y = null;
+			if(x.isPresent())
+			{
+				 y = x.get();  
+				
+			}
+			else
+			{
+				System.out.println("Item Not Found");	
+			}
+			System.out.println(y);
+			 return y;
+		   
+		}
+		
 		
 
 		/*public List<Customer_Details> AllCustomer(String n) {

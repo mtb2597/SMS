@@ -45,7 +45,7 @@
     </div>
 </mat-card>           
             <div class="container" style="font-family: Arial, Helvetica, sans-serif; font-weight:bold">
-                <div  style = "padding-left: 380px">
+                <div  style = "padding-left: 350px">
                
                 <table border="0" cellspacing="4" cellpadding="1"  >
                     <thead>
@@ -64,17 +64,21 @@
                       <tr></tr>
                       
                         <tr>
-                    <td id="block1"><label>Enter Product Name</label><br><br></td>
-                    <td ><input type="text"  placeholder="Enter Product To Purchase"  name="qty" #qty /><br><br></td>
+                    <td id="block1"><label>Enter Product Id</label><br><br></td>
+                    <td style="padding-left:50px"><input type="text"  placeholder="Enter Product Id"  name="qty" #qty /><br><br></td>
                         </tr>
+                        <tr>
+                            <td id="block1"><label>Enter Quantity</label><br><br></td>
+                            <td style="padding-left:50px" ><input type="text"  placeholder="Enter Quantity"  name="quant" #quant (blur)="Calculate(quant.value)"/><br><br></td>
+                                </tr>
                             <tr></tr>
                             <tr></tr>
                             <tr></tr>
                             <tr></tr>
                             <tr></tr>
                                 <tr>
-                                    <td   ><input   type="submit" value="MAKE PAYMENT"  (click)="addtocart(qty.value)" style=" width:120%; height:45px; font-weight:bold "/></td>
-                                      <td style="padding-left: 50px;"><input  type="submit" value="RESET"  (click)="reset(qty)" style=" width:80%; height:45px; font-weight:bold; "/></td>
+                                    <td   ><input   type="submit" value="MAKE PAYMENT"  (click)="addtocart(qty.value,quant.value)" style=" width:120%; height:45px; font-weight:bold "/></td>
+                                      <td style="padding-left: 50px;"><input  type="submit" value="RESET"  (click)="reset(qty,quant)" style=" width:80%; height:45px; font-weight:bold; "/></td>
                                 
                                 </tr>
                             

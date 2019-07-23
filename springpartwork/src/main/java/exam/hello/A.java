@@ -44,6 +44,20 @@ public class A {
 	    obj1.SelectProduct1(p);
 		
 	}
+	
+	@GetMapping("/invoice_display")
+	public Invoice f3(@RequestParam("y") String p)//assume single select
+	{
+	   return obj1.SelectInvoice();
+		
+	}
+	
+	@GetMapping("/invoice_qtystore")
+	public void f6(@RequestParam("y") int p)//assume single select
+	{
+	    obj1.QuantityStore(p);
+		
+	}
 	@PostMapping("/customer_login")
 	public UserLogin CustomerLogin(@RequestBody String m) throws JsonParseException, JsonMappingException, IOException//assume single select
 	{

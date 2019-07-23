@@ -44,9 +44,14 @@ displayedColumns = ['Product Id', 'Product Name','Price'];
      // console.log(this.result);
       this.router.navigate(['Invoice']);
   }
+  Calculate(quant:number)
+  {
+    this.ser.ajaxcall11(quant).subscribe( (data)=> { console.log("Inserted", data); });
+  }
   
-  reset(qty:any)
+  reset(qty:any,quant:any)
   {
     qty.value = "";
+    quant.value = "";
   }
 }
