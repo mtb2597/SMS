@@ -51,8 +51,8 @@ ModifyProduct(pid:number,pname:string,qty:number,price:number) {
   x.Product_Name = pname;
   x.Quantity = qty;
   x.Price = price;
-  alert(pname);
   this.ser.ajaxcall3(x).subscribe( (data)=> { this.y = data; console.log(this.y);});
+  this.show="Changes Saved Successfully";
 }
 ResetProduct(pid:any,pname:any,qty:any,price:any)
 {

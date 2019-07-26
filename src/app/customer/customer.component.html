@@ -65,11 +65,12 @@
                       
                         <tr>
                     <td id="block1"><label>Enter Product Id</label><br><br></td>
-                    <td style="padding-left:50px"><input type="text"  placeholder="Enter Product Id"  name="qty" #qty /><br><br></td>
+                    <td style="padding-left:50px;padding-top:27px;"><input type="text"  placeholder="Enter Product Id"  name="qty" #qty  /><br>
+                        <span style="color: darkred;padding-left: 1px; " >{{show}}</span><br><br></td>
                         </tr>
                         <tr>
                             <td id="block1"><label>Enter Quantity</label><br><br></td>
-                            <td style="padding-left:50px" ><input type="text"  placeholder="Enter Quantity"  name="quant" #quant (keypress)="Calculate(quant.value)"/><br><br></td>
+                            <td style="padding-left:50px" ><input type="text"  placeholder="Enter Quantity"  name="quant" #quant (blur)="Calculate(quant.value)"/><br><br></td>
                                 </tr>
                             <tr></tr>
                             <tr></tr>
@@ -77,13 +78,12 @@
                             <tr></tr>
                             <tr></tr>
                                 <tr>
-                                    <td  style="padding-left: 40px;" ><input   type="submit" value="MAKE PAYMENT"  (click)="addtocart(qty.value,quant.value)" style=" width:120%; height:45px; font-weight:bold "/></td>
+                                    <td  style="padding-left: 40px;" ><input   type="submit" value="MAKE PAYMENT"  (click)="check(qty.value)" (mouseleave)="reset1()" style=" width:120%; height:45px; font-weight:bold "/></td>
                                       <td style="padding-left: 50px;"><input  type="submit" value="RESET"  (click)="reset(qty,quant)" style=" width:80%; height:45px; font-weight:bold; "/></td>
                                 
                                 </tr>
-                            
-                    </tbody>
+                </tbody>
                 </table>
-                
                 </div>
+                
                
